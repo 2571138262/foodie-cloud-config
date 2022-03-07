@@ -1,0 +1,12 @@
+# Actuator 需要暴露的 endpoints 接口
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        # 通常在线上为了安全，并不会开启所有服务，只会开放某些特殊服务
+        include: '*'
+  security:
+    enabled: false
